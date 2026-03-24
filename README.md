@@ -19,12 +19,15 @@ A Django REST API for targeting and analyzing job postings. Automatically collec
 ## Preview
 
 **Job list — paginated response with `skill_summary`**
+
 ![Job list API response](assets/screenshot_api.png)
 
 **AI-generated structured summary**
+
 ![AI summary response](assets/screenshot_summary.png)
 
 **Trending skills**
+
 ![Trending skills response](assets/screenshot_trending.png)
 
 ---
