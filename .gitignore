@@ -1,0 +1,51 @@
+# ── Secrets (NEVER commit) ────────────────────────────────────────────────────
+.env
+*.env
+*.env.local
+
+# ── Claude Code (dev tools — not part of submission) ─────────────────────────
+.claude/
+CLAUDE.md
+WORKFLOW.md
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Django ────────────────────────────────────────────────────────────────────
+*.log
+local_settings.py
+db.sqlite3
+staticfiles/
+media/
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# ── Docker ────────────────────────────────────────────────────────────────────
+docker-data/
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Smoke test output (never commit) ─────────────────────────────────────────
+smoke_results*

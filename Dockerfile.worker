@@ -1,0 +1,16 @@
+FROM python:3.12-slim
+
+WORKDIR /app
+
+# psycopg2-binary needs libpq
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+# Celery worker — executes tasks (fetch_jobs_task) pushed by Beat
+CMD ["celery", "-A", "config", "worker", "-l", "info"]
